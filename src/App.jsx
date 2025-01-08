@@ -1,6 +1,8 @@
 import './App.css'
 import React, { useState } from 'react';
 import Header from './components/header';
+import Menu from './components/Menu';
+import AboutUs from './components/AboutUs';
 
 
 const FixedBackground = () => {
@@ -16,12 +18,6 @@ const App = () => {
     switch (selectedSection) {
       case 'about':
         return <AboutUs />;
-      case 'whatWeDo':
-        return <WhatWeDo />;
-      case 'join':
-        return <JoinOurTeam />;
-      case 'donate':
-        return <Donate />;
       default:
         return <AboutUs />;
     }
@@ -31,6 +27,9 @@ const App = () => {
       <div>
           <FixedBackground />
           <Header />
+          <div style={{ paddingTop: '80px' }}></div>
+          <Menu onSelectSection={setSelectedSection} />
+          {renderSection()}
       </div>
   );
 };
