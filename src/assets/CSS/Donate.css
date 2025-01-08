@@ -1,0 +1,87 @@
+.donate-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto;
+    max-width: 70%;
+  }
+  
+  .donate-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  
+  .donate-container {
+    display: flex;
+    flex-direction: column; /* Column layout for mobile */
+    align-items: center; /* Center elements horizontally */
+  }
+  
+  .donate-description {
+    text-align: center;
+    max-width: 600px; /* Constrain max width */
+    margin-bottom: 20px;
+  }
+  
+  .donate-paragraph {
+    margin: 10px 0;
+    font-size: 1rem; /* Font size for readability */
+  }
+  
+  .donate-button-container {
+    display: flex;
+    justify-content: center; /* Center the button in the container */
+  }
+  
+  .donate-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white; /* Text color */
+    background-color: #0070ba; /* PayPal blue */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .donate-button:hover {
+    background-color: #005f8c; /* Darker shade for hover effect */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .donate-section {
+      padding: 15px;
+      margin: 5px; /* Reduce margin on smaller screens */
+    }
+  
+    .donate-title {
+      font-size: 1.5rem; /* Smaller title for mobile */
+    }
+  
+    .donate-paragraph {
+      font-size: 0.9rem; /* Slightly smaller paragraph font */
+      padding: 0 10px; /* Add padding to prevent text from touching edges */
+    }
+  
+    .donate-button {
+      padding: 12px 30px; /* Increase button size for touch targets */
+      font-size: 1.1rem; /* Increase font size for readability */
+    }
+  }
+  
+  /* Extra small devices (mobile phones) */
+  @media (max-width: 480px) {
+    .donate-title {
+      font-size: 1.2rem; /* Smaller title for extra small devices */
+    }
+  
+    .donate-paragraph {
+      font-size: 0.85rem; /* Even smaller paragraph font */
+    }
+  
+    .donate-button {
+      padding: 10px 25px; /* Adjust button size for smaller devices */
+    }
+  }

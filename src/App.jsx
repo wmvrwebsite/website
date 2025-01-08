@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import AboutUs from './components/AboutUs';
 import WhatWeDo from './components/WhatWeDo';
 import JoinOurTeam from './components/JoinOurTeam';
+import Donate from './components/Donate';
 
 
 const FixedBackground = () => {
@@ -24,6 +25,8 @@ const App = () => {
         return <WhatWeDo />;
       case 'join':
         return <JoinOurTeam />;
+      case 'donate':
+        return <Donate />;
       default:
         return <AboutUs />;
     }

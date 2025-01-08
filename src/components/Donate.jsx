@@ -1,37 +1,30 @@
 import React from 'react';
+import '../assets/CSS/Donate.css'; // Make sure this is the correct path
 
 const Donate = () => {
   return (
-    <section style={styles.section}>
-      <h2 style={styles.title}>About Us</h2>
-      <p style={styles.paragraph}>
-        We are a dedicated organization committed to supporting veterans in our community. 
-        Our mission is to enhance the lives of veterans and their families through various
-        programs, outreach initiatives, and community services!
-      </p>
-    </section>
+    <div className="donate-section">
+      <h2 className="donate-title">Donate</h2>
+      <div className="donate-container">
+        <div className="donate-description">
+          <p className="donate-paragraph">
+            Your generous donations help us carry out our mission to support veterans. 
+            Every contribution makes a significant impact on the lives of those who have served 
+            our country, allowing us to provide essential programs and services for their well-being.
+          </p>
+          <p className="donate-paragraph">
+            Please consider making a donation to help us continue our initiatives and outreach efforts. 
+            Together, we can create a brighter future for veterans and their families.
+          </p>
+        </div>
+        <div className="donate-button-container">
+          <a href="https://www.paypal.com/donate/?hosted_button_id=2YST93UCCR8F4" target="_blank" rel="noopener noreferrer">
+            <button className="donate-button">Donate Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
   );
-};
-
-// Styles for the component
-const styles = {
-  section: {
-    padding: '20px',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    marginTop: '40px',
-    textAlign: 'center',
-    maxWidth: '70%',
-    margin: '0 auto',
-  },
-  title: {
-    fontSize: '24px',
-    marginBottom: '10px',
-  },
-  paragraph: {
-    fontSize: '16px',
-    lineHeight: '1.5',
-  },
 };
 
 export default Donate;
