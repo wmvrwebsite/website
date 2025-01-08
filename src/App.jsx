@@ -4,6 +4,7 @@ import Header from './components/header';
 import Menu from './components/Menu';
 import AboutUs from './components/AboutUs';
 import WhatWeDo from './components/WhatWeDo';
+import JoinOurTeam from './components/JoinOurTeam';
 
 
 const FixedBackground = () => {
@@ -21,6 +22,8 @@ const App = () => {
         return <AboutUs />;
       case 'whatWeDo':
         return <WhatWeDo />;
+      case 'join':
+        return <JoinOurTeam />;
       default:
         return <AboutUs />;
     }

@@ -1,37 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../assets/CSS/JoinOurTeam.css'; // Import your external CSS file
+import teamPhoto from '../assets/Images/dean.webp'; // Update the path to your actual photo
 
 const JoinOurTeam = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Thank you for your interest, ${name}!\nPhone: ${phone}\nEmail: ${email}`);
+    setName('');
+    setPhone('');
+    setEmail('');
+    handleClosePopup(); // Close the popup
+  };
+
   return (
-    <section style={styles.section}>
-      <h2 style={styles.title}>About Us</h2>
-      <p style={styles.paragraph}>
-        We are a dedicated organization committed to supporting veterans in our community. 
-        Our mission is to enhance the lives of veterans and their families through various
-        programs, outreach initiatives, and community services.
-      </p>
+    <section className="join-section">
+      <h2 className="join-title">Join Our Team</h2>
+      <div className="content-container">
+        <div className="description-container">
+          <p className="description">
+            We are always looking for passionate individuals to join our team! If you’re interested 
+            in making a difference in the lives of veterans, we want to hear from you.
+          </p>
+        </div>
+        <div className="image-container">
+          <img 
+            src={teamPhoto} 
+            alt="Team" 
+            className="team-image" 
+          />
+        </div>
+      </div>
+      <button onClick={handleOpenPopup} className="join-button">Join Us</button>
+
+      {isPopupOpen && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <h3>Join Our Team</h3>
+            <form onSubmit={handleSubmit}>
+              <label className="popup-label">
+                Name:
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="popup-input"
+                  required
+                />
+              </label>
+              <label className="popup-label">
+                Phone Number:
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="popup-input"
+                  required
+                />
+              </label>
+              <label className="popup-label">
+                Email:
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="popup-input"
+                  required
+                />
+              </label>
+              <div className="button-container">
+                <button type="submit" className="submit-button">Submit</button>
+                <button type="button" onClick={handleClosePopup} className="cancel-button">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
-};
-
-// Styles for the component
-const styles = {
-  section: {
-    padding: '20px',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    marginTop: '40px',
-    textAlign: 'center',
-    maxWidth: '70%',
-    margin: '0 auto',
-  },
-  title: {
-    fontSize: '24px',
-    marginBottom: '10px',
-  },
-  paragraph: {
-    fontSize: '16px',
-    lineHeight: '1.5',
-  },
 };
 
 export default JoinOurTeam;
