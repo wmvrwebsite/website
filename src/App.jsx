@@ -33,7 +33,7 @@ const App = () => {
       <div>
           <FixedBackground />
           <Header />
-          <div style={{ paddingTop: '80px' }}></div>
+          <div style={{ paddingTop: '20px' }}></div>
           <Menu onSelectSection={setSelectedSection} />
           {renderSection()}
       </div>
