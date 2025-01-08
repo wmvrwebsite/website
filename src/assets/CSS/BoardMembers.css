@@ -25,6 +25,7 @@
     background-color: lightgray;
 }
 
+/* Container for active member */
 .active-member-container {
     display: flex;
     align-items: center;
@@ -37,13 +38,13 @@
 }
 
 .member-image {
-    width: 100%;
+    width: 100%; /* Responsive images */
     height: auto;
     border-radius: 8px;
 }
 
 .member-info-container {
-    flex: 2;
+    flex: 2; /* More space for info */
     text-align: left;
 }
 
@@ -55,4 +56,37 @@
 .member-bio {
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .board-section {
+        max-width: 90%; /* More width for mobile */
+        padding: 15px; /* Slightly less padding for mobile */
+    }
+
+    .active-member-container {
+        flex-direction: column; /* Stack the image above the info on mobile */
+        align-items: center; /* Center items */
+    }
+
+    .member-image-container {
+        margin-right: 0; /* Reset margin */
+        margin-bottom: 15px; /* Space below the image */
+        flex: none; /* Reset flex so it behaves well in a column */
+    }
+
+    .member-info-container {
+        flex: none; /* Reset flex */
+        text-align: center; /* Center align text on mobile */
+    }
+    
+    .board-title {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .board-button {
+        font-size: 14px; /* Adjust button size for mobile */
+        padding: 8px; /* Less padding for smaller buttons */
+    }
 }
