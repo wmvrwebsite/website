@@ -1,11 +1,7 @@
 import './App.css'
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Menu from './components/Menu';
-import AboutUs from './components/AboutUs';
-import WhatWeDo from './components/WhatWeDo';
-import JoinOurTeam from './components/JoinOurTeam';
-import Donate from './components/Donate';
+import Header from './components/header';
+
 
 const FixedBackground = () => {
   return (
@@ -35,9 +31,6 @@ const App = () => {
       <div>
           <FixedBackground />
           <Header />
-          <div style={{ paddingTop: '80px' }}></div>
-          <Menu onSelectSection={setSelectedSection} />
-          {renderSection()}
       </div>
   );
 };
