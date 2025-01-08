@@ -6,7 +6,6 @@ import AboutUs from './components/AboutUs';
 import WhatWeDo from './components/WhatWeDo';
 import JoinOurTeam from './components/JoinOurTeam';
 import Donate from './components/Donate';
-import BoardMembers from './components/BoardMembers';
 
 const FixedBackground = () => {
   return (
@@ -36,6 +35,7 @@ const App = () => {
       <div>
           <FixedBackground />
           <Header />
+          <div style={{ paddingTop: '80px' }}></div>
           <Menu onSelectSection={setSelectedSection} />
           {renderSection()}
       </div>
