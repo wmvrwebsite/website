@@ -3,6 +3,8 @@ html, body {
   height: 100%; /* Ensure body takes full height */
 }
 
+
+
 .fixed-background {
   position: fixed; /* Fix to the viewport */
   top: 0;  /* Position it at the top */

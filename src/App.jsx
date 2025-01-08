@@ -1,5 +1,12 @@
 import './App.css'
-import Header from './components/header';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import AboutUs from './components/AboutUs';
+import WhatWeDo from './components/WhatWeDo';
+import JoinOurTeam from './components/JoinOurTeam';
+import Donate from './components/Donate';
+import BoardMembers from './components/BoardMembers';
 
 const FixedBackground = () => {
   return (
@@ -8,13 +15,29 @@ const FixedBackground = () => {
 };
 
 const App = () => {
+  const [selectedSection, setSelectedSection] = useState('about'); // Default section
+
+  const renderSection = () => {
+    switch (selectedSection) {
+      case 'about':
+        return <AboutUs />;
+      case 'whatWeDo':
+        return <WhatWeDo />;
+      case 'join':
+        return <JoinOurTeam />;
+      case 'donate':
+        return <Donate />;
+      default:
+        return <AboutUs />;
+    }
+  };
+
   return (
       <div>
           <FixedBackground />
           <Header />
-          <div style={{ position: 'relative', zIndex: 1, padding: '20px' }}>
-              <h1>Welcome to Our Site</h1>
-          </div>
+          <Menu onSelectSection={setSelectedSection} />
+          {renderSection()}
       </div>
   );
 };
