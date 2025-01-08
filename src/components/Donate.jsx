@@ -7,7 +7,7 @@ const Donate = () => {
       <p style={styles.paragraph}>
         We are a dedicated organization committed to supporting veterans in our community. 
         Our mission is to enhance the lives of veterans and their families through various
-        programs, outreach initiatives, and community services.
+        programs, outreach initiatives, and community services!
       </p>
     </section>
   );
