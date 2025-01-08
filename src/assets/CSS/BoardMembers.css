@@ -60,7 +60,7 @@
 
 @media (max-width: 768px) {
     .board-section {
-        max-width: 90%; /* More width for mobile */
+        max-width: 80%; /* More width for mobile */
         padding: 15px; /* Slightly less padding for mobile */
     }
 

@@ -53,7 +53,8 @@
   @media (max-width: 768px) {
     .donate-section {
       padding: 15px;
-      margin: 5px; /* Reduce margin on smaller screens */
+      margin: 5px auto; /* Reduce margin on smaller screens */
+      max-width: 90%
     }
   
     .donate-title {
