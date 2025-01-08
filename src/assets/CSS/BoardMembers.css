@@ -58,7 +58,6 @@
     line-height: 1.5;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     .board-section {
         max-width: 90%; /* More width for mobile */
@@ -66,14 +65,21 @@
     }
 
     .active-member-container {
-        flex-direction: column; /* Stack the image above the info on mobile */
-        align-items: center; /* Center items */
+        display: flex; /* Ensure it's a flex container */
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center the contents */
     }
 
     .member-image-container {
         margin-right: 0; /* Reset margin */
         margin-bottom: 15px; /* Space below the image */
-        flex: none; /* Reset flex so it behaves well in a column */
+        flex: none; /* Reset flex */
+        width: 100%; /* Ensure image container takes full width */
+    }
+
+    .member-image {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .member-info-container {
