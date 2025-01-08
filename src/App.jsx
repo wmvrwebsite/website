@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from './components/header';
 import Menu from './components/Menu';
 import AboutUs from './components/AboutUs';
+import WhatWeDo from './components/WhatWeDo';
 
 
 const FixedBackground = () => {
@@ -18,6 +19,8 @@ const App = () => {
     switch (selectedSection) {
       case 'about':
         return <AboutUs />;
+      case 'whatWeDo':
+        return <WhatWeDo />;
       default:
         return <AboutUs />;
     }

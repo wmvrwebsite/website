@@ -1,0 +1,24 @@
+.nav {
+    padding: 10px;
+}
+
+.ul {
+    list-style: none; /* Remove bullets from list */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.button {
+    color: black; /* Text color for button */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+    text-decoration: underline; /* Underline text */
+}
