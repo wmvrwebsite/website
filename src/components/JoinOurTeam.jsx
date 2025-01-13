@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/CSS/JoinOurTeam.css'; // Import your external CSS file
 import teamPhoto from '../assets/Images/dean.webp'; // Update the path to your actual photo
+import handleSubmit from '../HandleSubmit'
 
 const JoinOurTeam = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -16,11 +17,8 @@ const JoinOurTeam = () => {
     setIsPopupOpen(false);
   };
 
-  const handleSubmit = (e) => {
-    client.models.Todo.create({ name, phone, email });
-    e.preventDefault();
-    alert(`Thank you for your interest, ${name}!\nPhone: ${phone}\nEmail: ${email}`);
-    handleClosePopup();
+  const onSubmit = (e) => {
+    handleSubmit(e, { name, phone, email }, setName, setPhone, setEmail, handleClosePopup);
   };
 
   return (
@@ -47,7 +45,7 @@ const JoinOurTeam = () => {
         <div className="popup-overlay">
           <div className="popup">
             <h3>Join Our Team</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={onSubmit}>
               <label className="popup-label">
                 Name:
                 <input
