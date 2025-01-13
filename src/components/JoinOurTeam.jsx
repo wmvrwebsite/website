@@ -17,12 +17,10 @@ const JoinOurTeam = () => {
   };
 
   const handleSubmit = (e) => {
+    client.models.Todo.create({ name, phone, email });
     e.preventDefault();
     alert(`Thank you for your interest, ${name}!\nPhone: ${phone}\nEmail: ${email}`);
-    setName('');
-    setPhone('');
-    setEmail('');
-    handleClosePopup(); // Close the popup
+    handleClosePopup();
   };
 
   return (
