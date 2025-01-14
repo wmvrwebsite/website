@@ -15,7 +15,7 @@ const tabData = {
       </>
     ),
   },
-  FundRaisers: {
+  "Fund Raisers": {
     image: FundRaiserPhoto,
     description: (
       <>
@@ -23,7 +23,7 @@ const tabData = {
       </>
     ),
   },
-  TheRanch: {
+  "The Ranch": {
     image: TheRanchPhoto,
     description: (
       <>
@@ -31,7 +31,7 @@ const tabData = {
       </>
     ),
   },
-  BuildingBonds: {
+  "Building Bonds": {
     image: BuildingBondsPhoto,
     description: (
       <>
